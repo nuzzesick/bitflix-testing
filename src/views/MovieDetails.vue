@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="video-background">
+      <div class="video-foreground">
+        <iframe :src="'https://www.youtube.com/embed/' + movie.trailer + '?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=' + movie.trailer" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
     <div class="top">
       <div class="container">
         <div class="row">
@@ -8,37 +13,42 @@
           </div>
           <div class="col-6">
             <div class="favorites-container">
-              <a
-              @click="setVote(movie.id)"
-              :class="moviesVotes[movie.id] ? 'unfavorite' : 'favorite'"
-              ><i class="fa fa-heart"></i>
-              </a>
+              <a @click="setVote(movie.id)" :class="moviesVotes[movie.id] ? 'unfavorite' : 'favorite'" data-toggle="tooltip" data-placement="bottom" title="Favorites"><i class="fa fa-heart"></i></a>
             </div>
           </div>
         </div>
-        <router-link
-          :to="{
-            name: 'movieStream',
-            params: { imdb_id: movie.imdb_id }
-          }"
-        >
-          <h2>Play</h2>
-          <br />
-          <br />
-        </router-link>
-        <a :href="'../stream/' + movie.imdb_id">Ver jaja</a>
+      </div>
+    </div>
+    <div class="movie-details">
+      <div class="container">
+        <div class="row details-container">
+          <div class="col-sm-12 col-md-4">
+            <div class="poster-container">
+              <div class="details-poster" :style="'background-image: url(https://image.tmdb.org/t/p/w600_and_h900_bestv2' + movie.poster_path + ')'"></div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-8">
+            <div class="info-container">
+              <h2>{{movie.title}}</h2>
+              <p class="tagline">{{movie.tagline}}</p>
+              <p class="details-info"><i class="fas fa-star"></i>{{movie.vote_average}}/10</p>
+              <p class="details-info"><i class="fas fa-circle separator"></i></p>
+              <p class="details-info">{{movie.release_date}}</p>
+              <p class="details-info"><i class="fas fa-circle separator"></i></p>
+              <p class="details-info">{{movie.runtime}} mins</p>
+              <p class="details-info"><i class="fas fa-circle separator"></i></p>
+              <p class="details-info">{{movie.genres}}</p>
+              <p class="overview">{{movie.overview}}</p>
+            </div>
+            <div class="streaming-container">
+              <a class="btn btn-primary watch-button" :href="'../stream/' + movie.imdb_id"><i class="fas fa-play"></i>Play now</a>
+              <a class="btn btn-outline-secondary watch-button" :href="movie.torrent"><i class="fas fa-magnet"></i>Download torrent</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <Footer />
-    <!-- <router-link
-      :to="{
-        name: 'movieStream',
-        params: { id: movie.id }
-      }"
-    >
-      <h2>Play</h2>
-    </router-link> -->
-    <!-- <img :src="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.poster"> -->
   </div>
 </template>
 <script>
@@ -64,6 +74,9 @@ export default {
     }
   },
   mounted() {
+    let appScript = document.createElement("script");
+    appScript.setAttribute("src", "/js/script.js");
+    document.head.appendChild(appScript);
     this.setVotesFromPersistence();
   },
   methods: {

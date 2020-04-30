@@ -1,11 +1,11 @@
 <template>
   <body
     :onload="
-      `let torrentId = '` +
+      `var client = new WebTorrent();
+      let torrentId = '` +
         movie.torrent +
         `tracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com'
 
-     var client = new WebTorrent()
 
      // HTML elements
       var $body = document.body
@@ -17,94 +17,67 @@
       var $uploadSpeed = document.querySelector('#uploadSpeed')
       var $downloadSpeed = document.querySelector('#downloadSpeed')
 
-      // Download the torrent
-      client.add(torrentId, function (torrent) {
+      var player = videojs('video-player');
+  client.add(torrentId, function(torrent) {
+  var file = torrent.files.find(function(file) {
+       return file.name.endsWith('.mp4')
+     });
+  file.renderTo('video#video-player_html5_api', {}, function callback() {
+    console.log('ready to play!');
+    // Trigger statistics refresh
+torrent.on('done', onDone)
+setInterval(onProgress, 500)
+onProgress()
 
-        // Torrents can contain many files. Let's use the .mp4 file
-        var file = torrent.files.find(function (file) {
-          return file.name.endsWith('.mp4')
-        })
+// Statistics
+function onProgress () {
+  // Peers
+  $numPeers.innerHTML = torrent.numPeers + (torrent.numPeers === 1 ? ' peer' : ' peers')
 
-        // Stream the file in the browser
-        file.appendTo('#output')
+  // Progress
+            var percent = Math.round(torrent.progress * 100 * 100) / 100
 
-        // Trigger statistics refresh
-        torrent.on('done', onDone)
-        setInterval(onProgress, 500)
-        onProgress()
+  $downloaded.innerHTML = prettyBytes(torrent.downloaded)
+            $total.innerHTML = prettyBytes(torrent.length)
 
-        // Statistics
-        function onProgress () {
-          // Peers
-          $numPeers.innerHTML = torrent.numPeers + (torrent.numPeers === 1 ? ' peer' : ' peers')
+  // Remaining time
+  var remaining
+  if (torrent.done) {
+    remaining = 'Done.'
+  } else {
+    remaining = moment.duration(torrent.timeRemaining / 1000, 'seconds').humanize()
+    remaining = remaining[0].toUpperCase() + remaining.substring(1) + ' remaining.'
+  }
+  $remaining.innerHTML = remaining
 
-          // Progress
-          var percent = Math.round(torrent.progress * 100 * 100) / 100
-          $progressBar.style.width = percent + '%'
-          $downloaded.innerHTML = prettyBytes(torrent.downloaded)
-          $total.innerHTML = prettyBytes(torrent.length)
+  // Speed rates
+  $downloadSpeed.innerHTML = prettyBytes(torrent.downloadSpeed) + '/s'
+  $uploadSpeed.innerHTML = prettyBytes(torrent.uploadSpeed) + '/s'
+}
+function onDone () {
+  $body.className += ' is-seed'
+  onProgress()
+}
+})
 
-          // Remaining time
-          var remaining
-          if (torrent.done) {
-            remaining = 'Done.'
-          } else {
-            remaining = moment.duration(torrent.timeRemaining / 1000, 'seconds').humanize()
-            remaining = remaining[0].toUpperCase() + remaining.substring(1) + ' remaining.'
-          }
-          $remaining.innerHTML = remaining
-
-          // Speed rates
-          $downloadSpeed.innerHTML = prettyBytes(torrent.downloadSpeed) + '/s'
-          $uploadSpeed.innerHTML = prettyBytes(torrent.uploadSpeed) + '/s'
-        }
-        function onDone () {
-          $body.className += ' is-seed'
-          onProgress()
-        }
-      })
-
-      // Human readable bytes util
-      function prettyBytes(num) {
-        var exponent, unit, neg = num < 0, units = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-        if (neg) num = -num
-        if (num < 1) return (neg ? '-' : '') + num + ' B'
-        exponent = Math.min(Math.floor(Math.log(num) / Math.log(1000)), units.length - 1)
-        num = Number((num / Math.pow(1000, exponent)).toFixed(2))
-        unit = units[exponent]
-        return (neg ? '-' : '') + num + ' ' + unit
-      }`
+// Human readable bytes util
+function prettyBytes(num) {
+var exponent, unit, neg = num < 0, units = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+if (neg) num = -num
+if (num < 1) return (neg ? '-' : '') + num + ' B'
+exponent = Math.min(Math.floor(Math.log(num) / Math.log(1000)), units.length - 1)
+num = Number((num / Math.pow(1000, exponent)).toFixed(2))
+unit = units[exponent]
+return (neg ? '-' : '') + num + ' ' + unit
+}
+  });`
     "
   >
     <GoBack />
     <h1>Streaming: {{ movie.title }}</h1>
-    <div id="hero">
-      <div id="output">
-        <div id="progressBar"></div>
-        <!-- The video player will be added here -->
-      </div>
-      <!-- Statistics -->
-      <div id="status">
-        <div>
-          <span class="show-leech">Downloading </span>
-          <span class="show-seed">Seeding </span>
-          <code>
-            <!-- Informative link to the torrent file -->
-            <a id="torrentLink" :href="movie.torrent">{{ movie.title }}</a>
-          </code>
-          <span class="show-leech"> from </span>
-          <span class="show-seed"> to </span>
-          <code id="numPeers">0 peers</code>.
-        </div>
-        <div>
-          <code id="downloaded"></code>
-          of <code id="total"></code> — <span id="remaining"></span><br />
-          &#x2198;<code id="downloadSpeed">0 b/s</code> / &#x2197;<code
-            id="uploadSpeed"
-            >0 b/s</code
-          >
-        </div>
-      </div>
+    <div id="video-container">
+      <video class="video-js" id="video-player" controls preload="auto" autoplay data-setup='{"playbackRates": [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] }'>
+      </video>
     </div>
   </body>
 </template>
@@ -130,9 +103,24 @@ export default {
     }
   },
   mounted() {
+    //VideoJS CSS
+    let videocss = document.createElement("link");
+    videocss.setAttribute("href", "https://vjs.zencdn.net/7.7.5/video-js.css");
+    videocss.setAttribute("rel", "stylesheet");
+    document.head.appendChild(videocss);
+    //VideoJS Support for IE8
+    let videold = document.createElement("script");
+    videold.setAttribute("src", "https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js");
+    document.head.appendChild(videold);
+    //VideoJS
+    let videojs = document.createElement("script");
+    videojs.setAttribute("src", "https://vjs.zencdn.net/7.7.5/video.js");
+    document.body.appendChild(videojs);
+    //Moment.js
     let moment = document.createElement("script");
     moment.setAttribute("src", "http://momentjs.com/downloads/moment.min.js");
     document.body.appendChild(moment);
+    //WebTorrent
     let wt = document.createElement("script");
     wt.setAttribute(
       "src",
