@@ -34,14 +34,14 @@ const router = new Router({
     },
 
     {
-      path: "/movie/:id",
+      path: "/movie/:imdb_id",
       name: "movieDetails",
       props: true,
       component: () =>
         import(/* webpackChunkName: "movieDetails"*/ "./views/MovieDetails"),
       beforeEnter: (to, from, next) => {
         const exists = list.movies.find(
-          movie => movie.id === to.params.id
+          movie => movie.imdb_id === to.params.imdb_id
         );
         if (exists) {
           next();
@@ -51,14 +51,14 @@ const router = new Router({
       }
     },
     {
-      path: "/movie/stream/:id",
+      path: "/stream/:imdb_id",
       name: "movieStream",
       props: true,
       component: () =>
         import(/* webpackChunkName: "movieDetails"*/ "./views/MovieStream"),
       beforeEnter: (to, from, next) => {
         const exists = list.movies.find(
-          movie => movie.id === to.params.id
+          movie => movie.imdb_id === to.params.imdb_id
         );
         if (exists) {
           next();
@@ -72,11 +72,12 @@ const router = new Router({
       alias: "*",
       name: "notFound",
       component: () =>
-        import(/* webpackChunkName: "NotFound" */
-        "./views/NotFound")
+        import(
+          /* webpackChunkName: "NotFound" */
+          "./views/NotFound"
+        )
     }
   ]
 });
-
 
 export default router;

@@ -1,7 +1,7 @@
 <template>
-  <span class="go-back">
-    <button @click="goBack">go back</button>
-  </span>
+  <button @click="goBack" class="back">
+    <i class="fas fa-chevron-left"></i> Back
+  </button>
 </template>
 
 <script>
@@ -13,13 +13,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.go-back {
-  display: flex;
-  cursor: pointer;
-}
-button {
-  border: 0;
-}
-</style>
