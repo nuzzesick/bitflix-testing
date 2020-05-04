@@ -13,7 +13,7 @@
           </div>
           <div class="col-6">
             <div class="favorites-container">
-              <a @click="setVote(movie.id)" :class="moviesVotes[movie.id] ? 'unfavorite' : 'favorite'" data-toggle="tooltip" data-placement="bottom" title="Favorites"><i class="fa fa-heart"></i></a>
+              <a @click="setVote(movie.id)" class="btn" :class="moviesVotes[movie.id] ? 'unfavorite' : 'favorite'" data-toggle="tooltip" data-placement="bottom" title="Favorites"><i class="fa fa-heart"></i></a>
             </div>
           </div>
         </div>
@@ -41,8 +41,10 @@
               <p class="overview">{{movie.overview}}</p>
             </div>
             <div class="streaming-container">
-              <a class="btn btn-primary watch-button" :href="'../stream/' + movie.imdb_id"><i class="fas fa-play"></i>Play now</a>
-              <a class="btn btn-outline-secondary watch-button" :href="movie.torrent"><i class="fas fa-magnet"></i>Download torrent</a>
+              <router-link :to="{ name: 'movieStream', params: { imdb_id: movie.imdb_id } }">
+                <button class="btn btn-primary watch-button"><i class="fas fa-play"></i>Play now</button>
+              </router-link>
+              <a class="btn btn-outline-secondary watch-button" :href="'magnet:?xt=urn:btih:' + movie.torrent + '&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337tracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com'"><i class="fas fa-magnet"></i>Download torrent</a>
             </div>
           </div>
         </div>

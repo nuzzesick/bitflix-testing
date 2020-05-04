@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Rate from "./views/Rate.vue";
 import list from "@/list";
 Vue.use(Router);
 
@@ -30,6 +31,13 @@ const router = new Router({
       path: "/",
       name: "home",
       component: Home,
+      props: true
+    },
+
+    {
+      path: "/rating",
+      name: "rate",
+      component: Rate,
       props: true
     },
 
