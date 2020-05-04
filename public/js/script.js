@@ -5,6 +5,8 @@ filterSelection("all")
     function filterSelection(c) {
       var x, i;
       x = document.getElementsByClassName("filterDiv");
+      elem = document.getElementById("current");
+      elem.innerText = c.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
       if (c == "all") c = "";
       for (i = 0; i < x.length; i++) {
         RemoveClass(x[i], "show");
