@@ -427,12 +427,15 @@ body {
   box-shadow: 0 0 12px #0000008f;
   border-radius: 5px;
 }
-::cue {
-  font-family: 'Poppins' , sans-serif;
-  color: var(--white);
-  font-weight: 500;
+.plyr--video {
+  --plyr-color-main: var(--blue);
+  --plyr-captions-background: transparent;
+}
+.plyr__caption {
   text-shadow: 0 0 5px black;
-  background: none;
+}
+.plyr__menu__container {
+  background-color: var(--bg)!important;
 }
 #status {
   margin-bottom: 80px;

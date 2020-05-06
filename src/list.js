@@ -23,7 +23,7 @@ export default {
 //   "en": "",
 //   "fr": "",
 //   "br": "",
-//   "ar": ""
+//   "ita": ""
 // }
     // {
     //   "genres": "Drama Romance"
@@ -54,7 +54,7 @@ export default {
     //   "en": "",
     //   "fr": "",
     //   "br": "",
-    //   "ar": ""
+    //   "ita": ""
     // },
     {
       "genres": "Drama Action Thriller",
@@ -81,11 +81,11 @@ export default {
       "vote_count": 1210,
       "trailer": "L6P3nI6VnlY",
       "torrent": "5EB5104B94724F2AEF5D1D3545DE45833E8FE614",
-      "es": "https://yify-api.now.sh/subs/tt8936646/29",
-      "en": "https://yify-api.now.sh/subs/tt8936646/8",
-      "fr": "https://yify-api.now.sh/subs/tt8936646/25",
-      "br": "https://yify-api.now.sh/subs/tt8936646/4",
-      "ar": "https://yify-api.now.sh/subs/tt8936646/0"
+      "es": "https://www.seedr.cc/subtitles/1956753920/spa/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19de0c58%2Fsid-gjWAYiRJhSJ0xbd1mYszmmLS6wb%2Ffilead%2F1956753920.gz/sub.vtt",
+      "en": "https://www.seedr.cc/subtitles/1956751627/eng/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d40c5a%2Fsid-lyxRD9OEsorFzlZpNMvlzO1Sgwa%2Ffilead%2F1956751627.gz/sub.vtt",
+      "fr": "https://www.seedr.cc/subtitles/1956752300/fre/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19c40c4f%2Fsid-M-BzC4tVXQMFKEAkUFo8fRwFFy6%2Ffilead%2F1956752300.gz/sub.vtt",
+      "br": "https://www.seedr.cc/subtitles/1956752167/pob/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d10c5a%2Fsid-suwChu6wfeGJ0GzN2lwxmET5ge9%2Ffilead%2F1956752167.gz/sub.vtt",
+      "ita": "https://www.seedr.cc/subtitles/1956751688/ita/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19e10c61%2Fsid-xk7pt-neKIX8q8UYWCFcRphQWva%2Ffilead%2F1956751688.gz/sub.vtt"
     },
     {
       "genres": "Adventure Animation Comedy Family Fantasy",
@@ -111,11 +111,11 @@ export default {
       "vote_count": 4749,
       "trailer": "LDXYRzerjzU",
       "torrent": "0B9C7DD6E98FBB2965706D3719D846C0F2E1367A",
-      "es": "https://yify-api.now.sh/subs/tt1979376/50",
-      "en": "https://yify-api.now.sh/subs/tt1979376/12",
-      "fr": "https://yify-api.now.sh/subs/tt1979376/35",
-      "br": "https://yify-api.now.sh/subs/tt1979376/4",
-      "ar": "https://yify-api.now.sh/subs/tt1979376/0"
+      "es": "https://www.seedr.cc/subtitles/1956465302/spa/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19c50c52%2Fsid-sb8brRqb%2Cu--oWZSAPKw1rd-jc7%2Ffilead%2F1956465302.gz/sub.vtt",
+      "en": "https://www.seedr.cc/subtitles/1956464526/eng/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19cf0c59%2Fsid-v7koOSrAPJ7uqxQjwF-QlkrkMu6%2Ffilead%2F1956464526.gz/sub.vtt",
+      "fr": "https://www.seedr.cc/subtitles/1956475373/fre/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d90c5b%2Fsid-ngpxlx6jJZF34d8rlD1RtwPk0w4%2Ffilead%2F1956475373.gz/sub.vtt",
+      "br": "https://www.seedr.cc/subtitles/1956481755/pob/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d80c5c%2Fsid-MYGoTq3sIqYjWNHilH-mfTFsPEa%2Ffilead%2F1956481755.gz/sub.vtt",
+      "ita": "https://www.seedr.cc/subtitles/1956525092/ita/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19c00c55%2Fsid-OTMLk6ayN2aIglGLQuoW1xSGK3b%2Ffilead%2F1956525092.gz/sub.vtt"
     },
     {
       "adult": false,
@@ -142,11 +142,11 @@ export default {
       "vote_count": 2450,
       "trailer": "Kwg07npuJhw",
       "torrent": "DBE74C2EF8C14780C622C5C2CF932FC34AA00228",
-      "es": "https://yify-api.now.sh/subs/tt6472976/39",
-      "en": "https://yify-api.now.sh/subs/tt6472976/3",
-      "fr": "https://yify-api.now.sh/subs/tt6472976/",
-      "br": "https://yify-api.now.sh/subs/tt6472976/2",
-      "ar": "https://yify-api.now.sh/subs/tt6472976/1"
+      "es": "https://www.seedr.cc/subtitles/1956376131/spa/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19c70c53%2Fsid-XSRQOckwhiUfU1CKM28seXqWthb%2Ffilead%2F1956376131.gz/sub.vtt",
+      "en": "https://www.seedr.cc/subtitles/1956349814/eng/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d80c5b%2Fsid-bBZ4VJ-EO0v9zV0p9LZocYe4AE7%2Ffilead%2F1956349814.gz/sub.vtt",
+      "fr": "https://www.seedr.cc/subtitles/1956406561/fre/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19bc0c54%2Fsid-lqxfIF7WbUN8BFk22qODgYMmnb0%2Ffilead%2F1956406561.gz/sub.vtt",
+      "br": "https://www.seedr.cc/subtitles/1956367535/pob/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d60c5b%2Fsid-Wgnq0ljOCmH6eXTB9PAzy2qFab9%2Ffilead%2F1956367535.gz/sub.vtt",
+      "ita": "https://www.seedr.cc/subtitles/1956755394/ita/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19e60c5f%2Fsid-bsrX99txiFEv8aTl0k6l6CwUEne%2Ffilead%2F1956755394.gz/sub.vtt"
     },
     {
       "adult": false,
@@ -173,11 +173,11 @@ export default {
       "vote_count": 4605,
       "trailer": "UcmZN0Mbl04",
       "torrent": "BCA973373EBDE35C3887D026C7929B8017A3572B",
-      "es": "https://yify-api.now.sh/subs/tt8579674/36",
-      "en": "https://yify-api.now.sh/subs/tt8579674/9",
-      "fr": "https://yify-api.now.sh/subs/tt8579674/23",
-      "br": "https://yify-api.now.sh/subs/tt8579674/3",
-      "ar": "https://yify-api.now.sh/subs/tt8579674/2"
+      "es": "https://www.seedr.cc/subtitles/1956704174/spa/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19bf0c55%2Fsid-RkxAQNCD1qticLcLXojPb%2CMthDd%2Ffilead%2F1956704174.gz/sub.vtt",
+      "en": "https://www.seedr.cc/subtitles/1956630349/eng/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19bd0c57%2Fsid-GrruLoJ5aU%2CH8sAq%2CiRQZwz4yE6%2Ffilead%2F1956630349.gz/sub.vtt",
+      "fr": "https://www.seedr.cc/subtitles/1956644801/fre/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d10c55%2Fsid-VlUHpa7p8hdfxXZhcQLJIZ7-NF9%2Ffilead%2F1956644801.gz/sub.vtt",
+      "br": "https://www.seedr.cc/subtitles/1956690982/pob/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19ee0c60%2Fsid-mM5BHULaBpIAb5DJCWq5CvWKLd2%2Ffilead%2F1956690982.gz/sub.vtt",
+      "ita": "https://www.seedr.cc/subtitles/1956693384/ita/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19ea0c5f%2Fsid-jh9DorzD2QM3GCoqljO3rGM79Ie%2Ffilead%2F1956693384.gz/sub.vtt"
     },
     {
       "adult": false,
@@ -203,11 +203,11 @@ export default {
       "vote_count": 8615,
       "trailer": "n-7K_OjsDCQ",
       "torrent": "42FDF1AEEE3C641BE8C41BC1FEEDDF87A50CAE12",
-      "es": "https://yify-api.now.sh/subs/tt1951266/93",
-      "en": "https://yify-api.now.sh/subs/tt1951266/26",
-      "fr": "https://yify-api.now.sh/subs/tt1951266/54",
-      "br": "https://yify-api.now.sh/subs/tt1951266/16",
-      "ar": "https://yify-api.now.sh/subs/tt1951266/0"
+      "es": "https://www.seedr.cc/subtitles/1955172160/spa/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19a90c4e%2Fsid-V32pM-kSxqYRFpDjtU6Sgf7X2L1%2Ffilead%2F1955172160.gz/sub.vtt",
+      "en": "https://www.seedr.cc/subtitles/1954631756/eng/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19be0c58%2Fsid-rM5AId7TxBsvI5kXJoc0sXBHZad%2Ffilead%2F1954631756.gz/sub.vtt",
+      "fr": "https://www.seedr.cc/subtitles/1954781216/fre/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19c60c55%2Fsid-VYC0MCMvPN55ufetI3KJOmtGpT7%2Ffilead%2F1954781216.gz/sub.vtt",
+      "br": "https://www.seedr.cc/subtitles/1955123694/pob/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19ad0c56%2Fsid-WX-q3JloQtkAHcfUlYKaT%2CsgWU7%2Ffilead%2F1955123694.gz/sub.vtt",
+      "ita": "https://www.seedr.cc/subtitles/1955139996/ita/dl.opensubtitles.org%2Fen%2Fdownload%2Fsrc-api%2Fvrf-19d50c62%2Fsid-SqQE8-KNfTSnp47Kkk0992wXHY5%2Ffilead%2F1955139996.gz/sub.vtt"
     },
     {
       "adult": false,
@@ -237,7 +237,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt6146586/28",
       "fr": "https://yify-api.now.sh/subs/tt6146586/70",
       "br": "https://yify-api.now.sh/subs/tt6146586/10",
-      "ar": "https://yify-api.now.sh/subs/tt6146586/0"
+      "ita": "https://yify-api.now.sh/subs/tt6146586/0"
     },
     {
       "genres": "Action Sci-Fi",
@@ -268,7 +268,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1634106/14",
       "fr": "https://yify-api.now.sh/subs/tt1634106/35",
       "br": "https://yify-api.now.sh/subs/tt1634106/6",
-      "ar": "https://yify-api.now.sh/subs/tt1634106/0"
+      "ita": "https://yify-api.now.sh/subs/tt1634106/0"
     },
     {
       "adult": false,
@@ -298,7 +298,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1951265/15",
       "fr": "https://yify-api.now.sh/subs/tt1951265/42",
       "br": "https://yify-api.now.sh/subs/tt1951265/3",
-      "ar": "https://yify-api.now.sh/subs/tt1951265/1"
+      "ita": "https://yify-api.now.sh/subs/tt1951265/1"
     },
     {
       "adult": false,
@@ -329,7 +329,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt4126476/10",
       "fr": "https://yify-api.now.sh/subs/tt4126476/",
       "br": "https://yify-api.now.sh/subs/tt4126476/",
-      "ar": "https://yify-api.now.sh/subs/tt4126476/0"
+      "ita": "https://yify-api.now.sh/subs/tt4126476/0"
     },
     {
       "adult": false,
@@ -360,7 +360,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0120601/11",
       "fr": "https://yify-api.now.sh/subs/tt0120601/17",
       "br": "https://yify-api.now.sh/subs/tt0120601/2",
-      "ar": "https://yify-api.now.sh/subs/tt0120601/0"
+      "ita": "https://yify-api.now.sh/subs/tt0120601/0"
     },
     {
       "adult": false,
@@ -390,7 +390,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt3606756/10",
       "fr": "https://yify-api.now.sh/subs/tt3606756/26",
       "br": "https://yify-api.now.sh/subs/tt3606756/3",
-      "ar": "https://yify-api.now.sh/subs/tt3606756/0"
+      "ita": "https://yify-api.now.sh/subs/tt3606756/0"
     },
     {
       "adult": false,
@@ -420,7 +420,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt4477536/21",
       "fr": "https://yify-api.now.sh/subs/tt4477536/36",
       "br": "https://yify-api.now.sh/subs/tt4477536/5",
-      "ar": "https://yify-api.now.sh/subs/tt4477536/0"
+      "ita": "https://yify-api.now.sh/subs/tt4477536/0"
     },
     {
       "adult": false,
@@ -450,7 +450,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1951264/13",
       "fr": "https://yify-api.now.sh/subs/tt1951264/37",
       "br": "https://yify-api.now.sh/subs/tt1951264/4",
-      "ar": "https://yify-api.now.sh/subs/tt1951264/2"
+      "ita": "https://yify-api.now.sh/subs/tt1951264/2"
     },
     {
       "genres": "Crime Thriller Drama",
@@ -481,7 +481,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt7286456/27",
       "fr": "https://yify-api.now.sh/subs/tt7286456/56",
       "br": "https://yify-api.now.sh/subs/tt7286456/8",
-      "ar": "https://yify-api.now.sh/subs/tt7286456/0"
+      "ita": "https://yify-api.now.sh/subs/tt7286456/0"
     },
     {
       "adult": false,
@@ -511,7 +511,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt4520988/13",
       "fr": "https://yify-api.now.sh/subs/tt4520988/40",
       "br": "https://yify-api.now.sh/subs/tt4520988/3",
-      "ar": "https://yify-api.now.sh/subs/tt4520988/0"
+      "ita": "https://yify-api.now.sh/subs/tt4520988/0"
     },
     {
       "adult": false,
@@ -541,7 +541,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1000774/3",
       "fr": "https://yify-api.now.sh/subs/tt1000774/",
       "br": "https://yify-api.now.sh/subs/tt1000774/",
-      "ar": "https://yify-api.now.sh/subs/tt1000774/0"
+      "ita": "https://yify-api.now.sh/subs/tt1000774/0"
     },
     {
       "adult": false,
@@ -572,7 +572,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0137523/21",
       "fr": "https://yify-api.now.sh/subs/tt0137523/52",
       "br": "https://yify-api.now.sh/subs/tt0137523/10",
-      "ar": "https://yify-api.now.sh/subs/tt0137523/0"
+      "ita": "https://yify-api.now.sh/subs/tt0137523/0"
     },
     {
       "adult": false,
@@ -603,7 +603,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt2380307/18",
       "fr": "https://yify-api.now.sh/subs/tt2380307/59",
       "br": "https://yify-api.now.sh/subs/tt2380307/8",
-      "ar": "https://yify-api.now.sh/subs/tt2380307/0"
+      "ita": "https://yify-api.now.sh/subs/tt2380307/0"
     },
     {
       "adult": false,
@@ -633,7 +633,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt4777008/12",
       "fr": "https://yify-api.now.sh/subs/tt4777008/43",
       "br": "https://yify-api.now.sh/subs/tt4777008/3",
-      "ar": "https://yify-api.now.sh/subs/tt4777008/1"
+      "ita": "https://yify-api.now.sh/subs/tt4777008/1"
     },
     {
       "adult": false,
@@ -663,7 +663,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1392170/19",
       "fr": "https://yify-api.now.sh/subs/tt1392170/54",
       "br": "https://yify-api.now.sh/subs/tt1392170/8",
-      "ar": "https://yify-api.now.sh/subs/tt1392170/4"
+      "ita": "https://yify-api.now.sh/subs/tt1392170/4"
     },
     {
       "adult": false,
@@ -693,7 +693,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt4465564/16",
       "fr": "https://yify-api.now.sh/subs/tt4465564/55",
       "br": "https://yify-api.now.sh/subs/tt4465564/4",
-      "ar": "https://yify-api.now.sh/subs/tt4465564/0"
+      "ita": "https://yify-api.now.sh/subs/tt4465564/0"
     },
     {
       "adult": false,
@@ -724,7 +724,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0993846/21",
       "fr": "https://yify-api.now.sh/subs/tt0993846/82",
       "br": "https://yify-api.now.sh/subs/tt0993846/7",
-      "ar": "https://yify-api.now.sh/subs/tt0993846/0"
+      "ita": "https://yify-api.now.sh/subs/tt0993846/0"
     },
     {
       "adult": false,
@@ -755,7 +755,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt3521164/19",
       "fr": "https://yify-api.now.sh/subs/tt3521164/48",
       "br": "https://yify-api.now.sh/subs/tt3521164/9",
-      "ar": "https://yify-api.now.sh/subs/tt3521164/0"
+      "ita": "https://yify-api.now.sh/subs/tt3521164/0"
     },
     {
       "adult": false,
@@ -785,7 +785,7 @@ export default {
       "en": "",
       "fr": "",
       "br": "",
-      "ar": ""
+      "ita": ""
     },
     {
       "adult": false,
@@ -815,7 +815,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0126029/9",
       "fr": "https://yify-api.now.sh/subs/tt0126029/21",
       "br": "https://yify-api.now.sh/subs/tt0126029/2",
-      "ar": "https://yify-api.now.sh/subs/tt0126029/0"
+      "ita": "https://yify-api.now.sh/subs/tt0126029/0"
     },
     {
       "adult": false,
@@ -846,7 +846,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1375666/32",
       "fr": "https://yify-api.now.sh/subs/tt1375666/88",
       "br": "https://yify-api.now.sh/subs/tt1375666/15",
-      "ar": "https://yify-api.now.sh/subs/tt1375666/0"
+      "ita": "https://yify-api.now.sh/subs/tt1375666/0"
     },
     {
       "adult": false,
@@ -876,7 +876,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt2322441/26",
       "fr": "https://yify-api.now.sh/subs/tt2322441/69",
       "br": "https://yify-api.now.sh/subs/tt2322441/7",
-      "ar": "https://yify-api.now.sh/subs/tt2322441/1"
+      "ita": "https://yify-api.now.sh/subs/tt2322441/1"
     },
     {
       "adult": false,
@@ -907,7 +907,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1638002/19",
       "fr": "https://yify-api.now.sh/subs/tt1638002/49",
       "br": "https://yify-api.now.sh/subs/tt1638002/6",
-      "ar": "https://yify-api.now.sh/subs/tt1638002/0"
+      "ita": "https://yify-api.now.sh/subs/tt1638002/0"
     },
     {
       "adult": false,
@@ -937,7 +937,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt7349950/14",
       "fr": "https://yify-api.now.sh/subs/tt7349950/35",
       "br": "https://yify-api.now.sh/subs/tt7349950/4",
-      "ar": "https://yify-api.now.sh/subs/tt7349950/0"
+      "ita": "https://yify-api.now.sh/subs/tt7349950/0"
     },
     {
       "genres": "Animation, Action, Adventure, Comedy",
@@ -968,7 +968,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt5814534/5",
       "fr": "https://yify-api.now.sh/subs/tt5814534/14",
       "br": "https://yify-api.now.sh/subs/tt5814534/1",
-      "ar": "https://yify-api.now.sh/subs/tt5814534/0"
+      "ita": "https://yify-api.now.sh/subs/tt5814534/0"
     },
     {
       "genres": "Thriller Action Crime",
@@ -998,7 +998,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1502397/17",
       "fr": "",
       "br": "https://yify-api.now.sh/subs/tt1502397/8",
-      "ar": "https://yify-api.now.sh/subs/tt1502397/0"
+      "ita": "https://yify-api.now.sh/subs/tt1502397/0"
     },
     {
       "genres": "Sci-Fi Drama",
@@ -1029,7 +1029,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt2935510/10",
       "fr": "https://yify-api.now.sh/subs/tt2935510/24",
       "br": "https://yify-api.now.sh/subs/tt2935510/1",
-      "ar": "https://yify-api.now.sh/subs/tt2935510/0"
+      "ita": "https://yify-api.now.sh/subs/tt2935510/0"
     },
     {
       "adult": false,
@@ -1059,7 +1059,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0810900/0",
       "fr": "https://yify-api.now.sh/subs/tt0810900/",
       "br": "https://yify-api.now.sh/subs/tt0810900/",
-      "ar": "https://yify-api.now.sh/subs/tt0810900/"
+      "ita": "https://yify-api.now.sh/subs/tt0810900/"
     },
     {
       "genres": "Action Adventure Sci-Fi",
@@ -1089,7 +1089,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt2527338/12",
       "fr": "https://yify-api.now.sh/subs/tt2527338/21",
       "br": "https://yify-api.now.sh/subs/tt2527338/2",
-      "ar": "https://yify-api.now.sh/subs/tt2527338/0"
+      "ita": "https://yify-api.now.sh/subs/tt2527338/0"
     },
     {
       "adult": false,
@@ -1120,7 +1120,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt6139732/26",
       "fr": "https://yify-api.now.sh/subs/tt6139732/63",
       "br": "https://yify-api.now.sh/subs/tt6139732/8",
-      "ar": "https://yify-api.now.sh/subs/tt6139732/0"
+      "ita": "https://yify-api.now.sh/subs/tt6139732/0"
     },
     {
       "adult": false,
@@ -1151,7 +1151,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0816692/42",
       "fr": "https://yify-api.now.sh/subs/tt0816692/160",
       "br": "https://yify-api.now.sh/subs/tt0816692/16",
-      "ar": "https://yify-api.now.sh/subs/tt0816692/1"
+      "ita": "https://yify-api.now.sh/subs/tt0816692/1"
     },
     {
       "genres": "Action Sci-Fi Comedy Family",
@@ -1182,7 +1182,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt3794354/10",
       "fr": "https://yify-api.now.sh/subs/tt3794354/20",
       "br": "https://yify-api.now.sh/subs/tt3794354/3",
-      "ar": "https://yify-api.now.sh/subs/tt3794354/1"
+      "ita": "https://yify-api.now.sh/subs/tt3794354/1"
     },
     {
       "adult": false,
@@ -1212,7 +1212,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0475293/0",
       "fr": "https://yify-api.now.sh/subs/tt0475293/",
       "br": "https://yify-api.now.sh/subs/tt0475293/",
-      "ar": "https://yify-api.now.sh/subs/tt0475293/"
+      "ita": "https://yify-api.now.sh/subs/tt0475293/"
     },
     {
       "adult": false,
@@ -1243,7 +1243,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0119282/8",
       "fr": "https://yify-api.now.sh/subs/tt0119282/",
       "br": "https://yify-api.now.sh/subs/tt0119282/1",
-      "ar": "https://yify-api.now.sh/subs/tt0119282/0"
+      "ita": "https://yify-api.now.sh/subs/tt0119282/0"
     },
     {
       "adult": false,
@@ -1274,7 +1274,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0101507/8",
       "fr": "https://yify-api.now.sh/subs/tt0101507/9",
       "br": "https://yify-api.now.sh/subs/tt0101507/1",
-      "ar": "https://yify-api.now.sh/subs/tt0101507/0"
+      "ita": "https://yify-api.now.sh/subs/tt0101507/0"
     },
     {
       "adult": false,
@@ -1304,7 +1304,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1023111/10",
       "fr": "https://yify-api.now.sh/subs/tt1023111/17",
       "br": "https://yify-api.now.sh/subs/tt1023111/3",
-      "ar": "https://yify-api.now.sh/subs/tt1023111/0"
+      "ita": "https://yify-api.now.sh/subs/tt1023111/0"
     },
     {
       "adult": false,
@@ -1334,7 +1334,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt4154796/40",
       "fr": "https://yify-api.now.sh/subs/tt4154796/135",
       "br": "https://yify-api.now.sh/subs/tt4154796/17",
-      "ar": "https://yify-api.now.sh/subs/tt4154796/0"
+      "ita": "https://yify-api.now.sh/subs/tt4154796/0"
     },
     {
       "adult": false,
@@ -1365,7 +1365,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt0119217/15",
       "fr": "https://yify-api.now.sh/subs/tt0119217/31",
       "br": "https://yify-api.now.sh/subs/tt0119217/2",
-      "ar": "https://yify-api.now.sh/subs/tt0119217/1"
+      "ita": "https://yify-api.now.sh/subs/tt0119217/1"
     },
     {
       "adult": false,
@@ -1396,7 +1396,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt2584384/8",
       "fr": "https://yify-api.now.sh/subs/tt2584384/14",
       "br": "https://yify-api.now.sh/subs/tt2584384/2",
-      "ar": "https://yify-api.now.sh/subs/tt2584384/1"
+      "ita": "https://yify-api.now.sh/subs/tt2584384/1"
     },
     {
       "genres": "Comedy Thriller Drama",
@@ -1427,7 +1427,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt6751668/22",
       "fr": "https://yify-api.now.sh/subs/tt6751668/239",
       "br": "https://yify-api.now.sh/subs/tt6751668/10",
-      "ar": "https://yify-api.now.sh/subs/tt6751668/0"
+      "ita": "https://yify-api.now.sh/subs/tt6751668/0"
     },
     {
       "adult": false,
@@ -1458,7 +1458,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt7146812/8",
       "fr": "",
       "br": "https://yify-api.now.sh/subs/tt7146812/4",
-      "ar": "https://yify-api.now.sh/subs/tt7146812/0"
+      "ita": "https://yify-api.now.sh/subs/tt7146812/0"
     },
     {
       "adult": false,
@@ -1489,7 +1489,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1398426/",
       "fr": "https://yify-api.now.sh/subs/tt1398426/",
       "br": "https://yify-api.now.sh/subs/tt1398426/",
-      "ar": "https://yify-api.now.sh/subs/tt1398426/"
+      "ita": "https://yify-api.now.sh/subs/tt1398426/"
     },
     {
       "genres": "Action Crime Comedy",
@@ -1520,7 +1520,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt7713068/11",
       "fr": "https://yify-api.now.sh/subs/tt7713068/25",
       "br": "https://yify-api.now.sh/subs/tt7713068/2",
-      "ar": "https://yify-api.now.sh/subs/tt7713068/0"
+      "ita": "https://yify-api.now.sh/subs/tt7713068/0"
     },
     {
       "genres": "Comedy Romance",
@@ -1551,7 +1551,7 @@ export default {
       "en": "",
       "fr": "https://yify-api.now.sh/subs/tt7139936/7",
       "br": "",
-      "ar": "https://yify-api.now.sh/subs/tt7139936/0"
+      "ita": "https://yify-api.now.sh/subs/tt7139936/0"
     },
     {
       "genres": 'Action Adventure Sci-Fi',
@@ -1582,7 +1582,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt6320628/17",
       "fr": "https://yify-api.now.sh/subs/tt6320628/48",
       "br": "https://yify-api.now.sh/subs/tt6320628/6",
-      "ar": "https://yify-api.now.sh/subs/tt6320628/0"
+      "ita": "https://yify-api.now.sh/subs/tt6320628/0"
     },
     {
       "genres": "Drama Music",
@@ -1613,7 +1613,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt1727824/17",
       "fr": "https://yify-api.now.sh/subs/tt1727824/41",
       "br": "https://yify-api.now.sh/subs/tt1727824/3",
-      "ar": "https://yify-api.now.sh/subs/tt1727824/0"
+      "ita": "https://yify-api.now.sh/subs/tt1727824/0"
     },
     {
       "genres": "Adventure Family Animation Action Comedy",
@@ -1644,7 +1644,7 @@ export default {
       "en": "https://yify-api.now.sh/subs/tt2245084/31",
       "fr": "https://yify-api.now.sh/subs/tt2245084/52",
       "br": "https://yify-api.now.sh/subs/tt2245084/12",
-      "ar": "https://yify-api.now.sh/subs/tt2245084/0"
+      "ita": "https://yify-api.now.sh/subs/tt2245084/0"
     }
   ]
 };

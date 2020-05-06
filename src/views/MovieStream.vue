@@ -20,13 +20,15 @@
         <div id="torrent">magnet:?xt=urn:btih:{{movie.torrent}}&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com</div>
         <div class="container h-100">
           <div class="playerContainer h-100">
-            <video id="video" class="player" preload="auto" controls crossorigin="anonymous">
-              <track kind="subtitles" :src="movie.es" srclang="es" label="Español" default>
-              <track kind="subtitles" :src="movie.en" srclang="en" label="English">
-              <track kind="subtitles" :src="movie.fr" srclang="fr" label="French">
-              <track kind="subtitles" :src="movie.br" srclang="br" label="Brazilian Portuguese">
-              <track kind="subtitles" :src="movie.ar" srclang="ar" label="Arabic">
-            </video>
+            <vue-plyr>
+              <video :src="'https://live-torrent-testing.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" id="player" playsinline preload="auto" controls crossorigin="anonymous" :data-poster="'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/' + movie.backdrop_path" autoplay>
+                <track kind="subtitles" :src="movie.es" srclang="es" label="Español" default>
+                <track kind="subtitles" :src="movie.en" srclang="en" label="English">
+                <track kind="subtitles" :src="movie.fr" srclang="fr" label="Français">
+                <track kind="subtitles" :src="movie.br" srclang="br" label="Brazilian Portuguese">
+                <track kind="subtitles" :src="movie.ita" srclang="ita" label="Italiano">
+              </video>
+            </vue-plyr>
             <div class="progressbar" data-toggle="tooltip" data-placement="bottom" title="Torrent progress">
               <div id="progressBar"></div>
             </div>
@@ -80,12 +82,10 @@ export default {
     }
   },
   mounted() {
-    let stream = document.createElement("script");
-    stream.setAttribute("src", "../js/stream.js");
-    document.body.appendChild(stream);
     let appScript = document.createElement("script");
     appScript.setAttribute("src", "/js/script.js");
     document.head.appendChild(appScript);
+    //Player
     this.setVotesFromPersistence();
   },
   methods: {
