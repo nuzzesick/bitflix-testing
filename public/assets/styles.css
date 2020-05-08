@@ -28,7 +28,7 @@ body, html {
   background: #93989c;
 	border-radius: 2px;
 }
-h1, h2, h3, h4, h5, h6, p, span, a, button, li {
+div, h1, h2, h3, h4, h5, h6, p, span, a, button, li {
   font-family: 'Poppins', sans-serif;
   color: var(--white);
 }
@@ -99,18 +99,43 @@ body {
   box-shadow: 0 0 12px #00000063;
   padding-bottom: 10px;
 }
-.navbar {
-  margin-top: 10px;
+.current-movies {
+  float: left;
+  width: 0;
+}
+.profile-menu {
+  float: right;
+}
+.menu-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px black;
+  margin-right: 10px;
+}
+.dropdown-profile {
+  min-width: 100%;
+}
+.profile-item {
+  text-align: right;
+  color: var(--grey);
+}
+.main-navbar {
+  margin-top: 15px;
 }
 #btn-container {
   display: flex;
+}
+.filter-dropdown {
+  text-align: left!important;
+  line-height: 2.3;
 }
 .filter {
   display: inline-block;
   margin-right: 10px;
   font-weight: 400;
   color: var(--white);
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
@@ -123,6 +148,15 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
+}
+.filter:hover {
+  background: #1d1d1d;
+}
+.filter-active {
+  background: var(--blue);
+}
+.filter-active:hover {
+  background: var(--blue);
 }
 .genre {
   width: 100%;
@@ -185,6 +219,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   font-weight: 400;
+  margin-right: 1.75rem;
 }
 .searchContainer:focus-within {
   box-shadow: 0px 0px 8px #1f1f1f;
@@ -206,24 +241,50 @@ body {
 .filterDiv {
   width: 134px;
   display: none;
+  list-style: none;
 }
 .show {
   display: block;
 }
-.poster {
-  border-radius: 5px;
-  width: 200px;
-	height: 286px;
-	background-size: cover
-  box-shadow: 0px 0px 6px #080808;
-  -webkit-box-shadow: 0px 0px 6px #080808;
+.item-poster {
+  display: block;
 	cursor: pointer;
   margin-bottom: -2px;
   transition: .3s ease-in-out;
+  width: 196px;
+  border-radius: 5px;
 }
-.poster:hover {
-  filter: brightness(0.8);
-  border: 3px solid var(--blue);
+.item-poster:hover {
+  filter: brightness(0.5);
+}
+.item-poster:hover ~ .rate-item {
+  display: block;
+}
+.poster {
+  width: 200px;
+	height: 286px;
+	background-size: 200px 286px;
+  box-shadow: 0px 0px 6px #080808;
+  -webkit-box-shadow: 0px 0px 6px #080808;
+  border-radius: 5px;
+}
+.rate-item {
+  display: none;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 2px;
+}
+.rate-item-text {
+  font-size: 0.8rem;
+  text-shadow: 0 0 5px black;
+  font-weight: 600;
+  background: #000000b0;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+}
+.rate-item .fa-star {
+  font-size: 0.6rem;
 }
 .movie-title {
   width: 170px;
@@ -239,10 +300,10 @@ body {
 	font-weight: 600;
 }
 .year {
-  text-align: left;
+  float: left;
   color: #adadad;
   margin-top: -10px;
-  font-size: 12px;
+  font-size: 0.8rem;
 	font-weight: 600
 }
 /* Movie details */
@@ -370,7 +431,7 @@ body {
   font-size: 0.9rem;
   margin-right: 15px;
 }
-.fa-magnet {
+.fa-download {
   font-size: 0.9rem;
   margin-right: 15px;
 }
@@ -397,8 +458,8 @@ body {
 .movie-streaming-container {
   position: relative;
 }
-#torrent {
-  display: none;
+.status {
+  margin-top: 40px;
 }
 .movie-info-title {
   color: var(--white);
@@ -408,67 +469,30 @@ body {
 .playerContainer {
   margin-top: 30px;
 }
-.progressbar {
-  height: 3px;
-  width: 100%;
-  background: #929292;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-#progressBar {
-  height: 3px;
-  width: 0%;
-  background: var(--blue);
-  transition: width .4s ease-in-out;
-}
 .player {
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 100%;
   -webkit-box-shadow: 0 0 12px #0000008f;
   box-shadow: 0 0 12px #0000008f;
   border-radius: 5px;
 }
-.plyr--video {
-  --plyr-color-main: var(--blue);
-  --plyr-captions-background: transparent;
-}
-.plyr__caption {
-  text-shadow: 0 0 5px black;
-}
-.plyr__menu__container {
-  background-color: var(--bg)!important;
-}
-#status {
-  margin-bottom: 80px;
-  color: var(--white);
-}
-body.is-seed .show-seed {
-    display: inline;
-}
-body.is-seed .show-leech {
-    display: none;
-}
-.show-seed {
-    display: none;
-}
-code {
-  color: var(--blue);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-}
-.health {
-  color: var(--white);
-}
-.fa-arrow-down {
-  color: var(--grey);
-  margin-right: 10px;
-}
-.fa-arrow-up {
-  color: var(--grey);
-  margin-right: 10px;
-}
 .mobile-download {
   display: none;
   margin-top: 50px;
+  margin-bottom: 40px;
+}
+.twitter-share-button {
+  margin-top: 5px;
+}
+.twitter-share-button:hover {
+  background: #1b7fbd;
+}
+.whatsapp-share-button {
+  margin-top: 5px;
+}
+.whatsapp-share-button:hover {
+  background: #2a8835;
 }
 /* Footer */
 
@@ -529,9 +553,13 @@ code {
     .filterDiv {
       margin-right: 20px;
     }
+    .item-poster {
+      width: 136px;
+    }
     .poster {
       width: 130px;
       height: 196px;
+      background-size: 130px 196px;
     }
     .movie-title {
       width: 120px;
@@ -575,11 +603,15 @@ code {
   }
   @media only screen and (min-width: 768px) {
     #search-ul {
-      padding-left: 45px;
+      padding-left: 25px;
+    }
+    .item-poster {
+      width: 176px;
     }
     .poster {
       width: 170px;
       height: 226px;
+      background-size: 170px 226px;
     }
     .favorites-container {
       margin-top: 2px;
@@ -603,7 +635,7 @@ code {
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     #search-ul {
-      padding-left: 25px;
+      padding-left: 30px;
     }
     .favorites-container {
       margin-top: 4px;
@@ -625,11 +657,15 @@ code {
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     #search-ul {
-      padding-left: 70px;
+      padding-left: 50px;
+    }
+    .item-poster {
+      width: 196px;
     }
     .poster {
       width: 190px;
     	height: 266px;
+      background-size: 190px 266px;
     }
     .favorites-container {
       margin-top: 6px;

@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Rate from "./views/Rate.vue";
+import About from "./views/About.vue";
+import Account from "./views/Account.vue";
 import list from "@/list";
 Vue.use(Router);
 
@@ -35,9 +36,16 @@ const router = new Router({
     },
 
     {
-      path: "/rating",
-      name: "rate",
-      component: Rate,
+      path: "/about",
+      name: "about",
+      component: About,
+      props: true
+    },
+
+    {
+      path: "/profile",
+      name: "account",
+      component: Account,
       props: true
     },
 

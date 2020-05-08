@@ -10,18 +10,19 @@
             </div>
             <div class="col-6">
               <div class="favorites-container">
-                <a id="downloadButton" class="btn download-disabled" data-toggle="tooltip" data-placement="bottom" title="Movie must first be downloaded"><i class="fas fa-cloud-download-alt"></i> Download movie</a>
+                <a id="downloadButton" class="btn btn-primary" :href="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" data-toggle="tooltip" data-placement="bottom" title="Download movie"><i class="fas fa-cloud-download-alt"></i> Download movie</a>
                 <a @click="setVote(movie.id)" class="btn" :class="moviesVotes[movie.id] ? 'unfavorite' : 'favorite'" data-toggle="tooltip" data-placement="bottom" title="Favorites"><i class="fa fa-heart"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div id="torrent">magnet:?xt=urn:btih:{{movie.torrent}}&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com</div>
         <div class="container h-100">
-          <div class="playerContainer h-100">
-            <vue-plyr>
-              <video :src="'https://live-torrent-testing.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" id="player" playsinline preload="auto" controls crossorigin="anonymous" :data-poster="'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/' + movie.backdrop_path" autoplay>
+          <div class="playerContainer h-100 text-center">
+            <h4 class="movie-info-title">Watching: {{movie.title}}</h4>
+            <vue-plyr class="player" style="--plyr-color-main: var(--blue)!important; --plyr-captions-background: transparent!important;">
+              <video id="player" :src="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" playsinline autoplay preload="metadata" controls :data-poster="'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/' + movie.backdrop_path" crossorigin="anonymous">
+                <source :src="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'">
                 <track kind="subtitles" :src="movie.es" srclang="es" label="Español" default>
                 <track kind="subtitles" :src="movie.en" srclang="en" label="English">
                 <track kind="subtitles" :src="movie.fr" srclang="fr" label="Français">
@@ -33,27 +34,12 @@
               <div id="progressBar"></div>
             </div>
           </div>
-          <!-- Statistics -->
-          <div id="status">
-            <div>
-              <code>
-                <!-- Informative link to the torrent file -->
-                <h6 class="movie-info-title">Playing: {{movie.title}}</h6>
-              </code>
-              <span class="show-leech">from </span>
-              <span class="show-seed"> to </span>
-              <code id="numPeers"> 0 peers</code>.
+          <div class="text-center">
+            <div class="mobile-download">
+              <a id="downloadButtonMobile" class="btn btn-primary" :href="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" data-toggle="tooltip" data-placement="bottom" title="Download movie"><i class="fas fa-cloud-download-alt"></i> Download movie</a>
             </div>
-            <div class="health">
-              <code id="downloaded"></code>
-              of <code id="total"></code>
-              — <span id="remaining"></span><br/>
-              <i class="fas fa-arrow-down"></i><code id="downloadSpeed">0 b/s</code>
-              / <i class="fas fa-arrow-up"></i><code id="uploadSpeed">0 b/s</code>
-            </div>
-          </div>
-          <div class="mobile-download text-center">
-            <a id="downloadButtonMobile" class="btn download-disabled" data-toggle="tooltip" data-placement="bottom" title="Movie must first be downloaded"><i class="fas fa-cloud-download-alt"></i> Download movie</a>
+            <a class="btn twitter-share-button" :href="'https://twitter.com/intent/tweet?text=Hey!%20I\'m%20watching%20' + movie.title + '%20on%20Bitflix.%20' + 'https://appbitflix.herokuapp.com/' + 'movie/' + movie.imdb_id" target="_blank" data-size="large"><i class="fab fa-twitter"></i> Share on Twitter</a>
+            <a class="btn whatsapp-share-button" :href="'https://wa.me/?text=Hey!%20I\'m%20watching%20' + movie.title + '%20on%20Bitflix.%20' + 'https://appbitflix.herokuapp.com/' + 'movie/' + movie.imdb_id" target="_blank" data-size="large"><i class="fab fa-whatsapp"></i> Share on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -85,7 +71,6 @@ export default {
     let appScript = document.createElement("script");
     appScript.setAttribute("src", "/js/script.js");
     document.head.appendChild(appScript);
-    //Player
     this.setVotesFromPersistence();
   },
   methods: {
@@ -118,3 +103,21 @@ export default {
   }
 };
 </script>
+<style>
+.plyr__captions .plyr__caption {
+  background: transparent!important;
+  text-shadow: 0 0 5px black!important;
+}
+.plyr__menu__container {
+  background-color: var(--bg)!important;
+}
+.plyr--full-ui input[type=range] {
+  color: var(--blue)!important;
+}
+.plyr__control--overlaid {
+  background: var(--blue)!important;
+}
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+  background: var(--blue)!important;
+}
+</style>

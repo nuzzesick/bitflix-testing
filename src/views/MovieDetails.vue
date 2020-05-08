@@ -1,5 +1,6 @@
 <template>
   <div>
+    <video id="player" style="display: none" :src="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" autoplay preload="metadata"></video>
     <div class="video-background">
       <div class="video-foreground">
         <iframe :src="'https://www.youtube.com/embed/' + movie.trailer + '?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=' + movie.trailer" frameborder="0" allowfullscreen></iframe>
@@ -42,9 +43,9 @@
             </div>
             <div class="streaming-container">
               <router-link :to="{ name: 'movieStream', params: { imdb_id: movie.imdb_id } }">
-                <button class="btn btn-primary watch-button"><i class="fas fa-play"></i>Play now</button>
+                <button class="btn btn-primary watch-button"><i class="fas fa-play"></i>Watch now</button>
               </router-link>
-              <a class="btn btn-outline-secondary watch-button" :href="'magnet:?xt=urn:btih:' + movie.torrent + '&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337tracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com'"><i class="fas fa-magnet"></i>Download torrent</a>
+              <a class="btn btn-outline-secondary watch-button" :href="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'"><i class="fas fa-download"></i>Download</a>
             </div>
           </div>
         </div>

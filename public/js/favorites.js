@@ -1,7 +1,7 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
-filterSelection("all")
+filterSelection("favorites")
     function filterSelection(c) {
       var x, i;
       x = document.getElementsByClassName("filterDiv");
@@ -45,6 +45,7 @@ filterSelection("all")
         this.className += " btn-primary";
       });
     }
+
 
     $(document).ready(function(){
       $("#search").on("keyup", function() {
