@@ -1,6 +1,5 @@
 <template>
   <div>
-    <video id="player" style="display: none" :src="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'" autoplay preload="metadata"></video>
     <div class="video-background">
       <div class="video-foreground">
         <iframe :src="'https://www.youtube.com/embed/' + movie.trailer + '?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=' + movie.trailer" frameborder="0" allowfullscreen></iframe>
@@ -42,10 +41,10 @@
               <p class="overview">{{movie.overview}}</p>
             </div>
             <div class="streaming-container">
-              <router-link :to="{ name: 'movieStream', params: { imdb_id: movie.imdb_id } }">
+              <router-link v-if="option1 || option2 || option3 || option4 || option5" :to="{ name: 'movieStream', params: { imdb_id: movie.imdb_id } }">
                 <button class="btn btn-primary watch-button"><i class="fas fa-play"></i>Watch now</button>
               </router-link>
-              <a class="btn btn-outline-secondary watch-button" :href="'https://server-bitflix.herokuapp.com/api/torrent/serve/' + movie.torrent + '/:video'"><i class="fas fa-download"></i>Download</a>
+              <a class="btn btn-outline-secondary watch-button" :href="option4"><i class="fas fa-download"></i>Download</a>
             </div>
           </div>
         </div>
@@ -67,7 +66,12 @@ export default {
   data() {
     return {
       movies: list.movies,
-      moviesVotes: {}
+      moviesVotes: {},
+      option1: '',
+      option2: '',
+      option3: '',
+      option4: '',
+      option5: ''
     };
   },
   props: {
@@ -77,10 +81,12 @@ export default {
     }
   },
   mounted() {
-    let appScript = document.createElement("script");
-    appScript.setAttribute("src", "/js/script.js");
-    document.head.appendChild(appScript);
     this.setVotesFromPersistence();
+    this.option1 = 'https://svflw.herokuapp.com/api/torrent/serve/' + this.movie.torrent + '/:video'
+    this.option2 = 'https://nam-bitflix.herokuapp.com/api/torrent/serve/' + this.movie.torrent + '/:video'
+    this.option3 = 'https://sv-bitflix.herokuapp.com/api/torrent/serve/' + this.movie.torrent + '/:video'
+    this.option4 = 'https://svv-bitflix.herokuapp.com/api/torrent/serve/' + this.movie.torrent + '/:video'
+    this.option5 = 'https://server-bitflix.herokuapp.com/api/torrent/serve/' + this.movie.torrent + '/:video'
   },
   methods: {
   /**

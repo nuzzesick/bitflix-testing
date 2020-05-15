@@ -1,6 +1,11 @@
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+$(document).ready(function(){
+  $('#search').focusin(function(){
+    $('#searchIcon').css('color', 'var(--blue)');
+  });
+  $('#search').focusout(function(){
+    $('#searchIcon').css('color', '#585858');
+  });
+});
 filterSelection("all")
     function filterSelection(c) {
       var x, i;
